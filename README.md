@@ -1,6 +1,8 @@
 # Topological_Photonic_Resonator
-Project Cornucopia: Topological Photonic Resonator. Photon Klein bottle trap with defined 64 states step up, as 2 in power of 6.
-Project Cornucopia: Topological Photonic Resonator
+Topological Photonic Resonator. 
+theoretical framework and experimental protocol for a passive topological energy harvester. This project explores the use of Klein-bottle manifolds mapped to hyperbolic M^4 substrates to rectify ambient photonic noise into coherent energy flux through geometric diode resonance.
+Photon Klein bottle trap with defined 64 states step up,2⁶.
+
 Abstract
 This project proposes the architectural framework for a passive topological energy harvester. By utilizing a Klein-bottle manifold embedded in a hyperbolic M^4 substrate, we aim to demonstrate a geometric diode capable of rectifying ambient photonic noise into coherent energy flux. This is achieved by leveraging the "7D sheer"—the trans-dimensional alternating current arising from the coupling of our M^4 brane to a higher-dimensional toroidal condenser.
 Core Hypothesis
