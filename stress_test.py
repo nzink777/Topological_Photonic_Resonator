@@ -51,4 +51,7 @@ def run_all_tests():
 
 if __name__ == "__main__":
     run_all_tests()
-  
+ # Inside stress_test.py, when you are done plotting:
+plt.savefig('resonator_output.png')
+print("[+] Plot saved as resonator_output.png")
+
