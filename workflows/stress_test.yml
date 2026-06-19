@@ -1,0 +1,18 @@
+name: Resonator Stress Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          pip install numpy scipy # Add your specific solver libraries here (e.g., meep, mpb)
+      - name: Run Failure Analysis
+        run: python stress_test.py
