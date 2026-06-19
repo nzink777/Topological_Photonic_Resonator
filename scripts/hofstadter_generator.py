@@ -1,4 +1,6 @@
 import numpy as np
+import matplotlib
+matplotlib.use('Agg') # This tells matplotlib to save files instead of trying to open a window
 import matplotlib.pyplot as plt
 
 def generate_hofstadter(q_range=64):
