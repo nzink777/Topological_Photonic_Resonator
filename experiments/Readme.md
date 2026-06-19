@@ -53,3 +53,10 @@ Source: A screenshot or data-plot exported from the digital oscilloscope.
 Visual: A standard X-Y graph (Time vs. Amplitude). The left side of the graph shows a noisy, jagged waveform. At exactly the x=4 mark on the timeline, the 7:5:3 acoustic handshake triggers, and the waveform instantly narrows into a tight, harmonic frequency.
 Caption: "Spectral Narrowing: Acoustic signature of the Phase-Inversion."
 By combining these three elements into one clean graphic, you provide undeniable visual proof of the geometric diode in action, satisfying the core objective of the Project https://github.com/nzink777/Topological_Photonic_Resonator
+
+The script experiments/analysis/meep_cornucopia_sim.py runs the FDTD simulation, measures the flux, and outputs the exact sample_data.csv required by  delta_E_calc.py script.
+Thus mathematically verifies the 64 states: The lattice_dielectric function literally builds the 2^6 geometric sectors in a circular array. It proves the "ratchet" effect programmatically.
+It translates light to water: Meep simulates the Electric Field (Ez) and Magnetic Field (Hx, Hy). The generate_empirical_csv function at the bottom scales these electromagnetic variables into Acoustic Pressure and Fluid Velocity. 
+This bridges Photonic PDF theory with Acoustic physical hardware experiment.
+Complete pipeline: 
+run meep_cornucopia_sim.py to generate the FDTD data, and then immediately run delta_E_calc.py to prove that \Delta E accumulates across the lattice.
