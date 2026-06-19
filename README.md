@@ -1,6 +1,11 @@
 # Topological_Photonic_Resonator
-Topological Photonic Resonator. 
-theoretical framework and experimental protocol for a passive topological energy harvester. This project explores the use of Klein-bottle manifolds mapped to hyperbolic M^4 substrates to rectify ambient photonic noise into coherent energy flux through geometric diode resonance.
+A passive energy harvesting framework utilizing non-orientable topology to rectify ambient photonic noise via the topological geometric sheer".
+    *   [Documentation](/docs)
+    *   [Visual Assets](/assets)
+    *   [Computational Scripts](/scripts)
+
+Topological Photonic Resonator: 
+this is theoretical physics framework and experimental protocol for a passive topological energy harvester. This project explores the use of Klein-bottle manifolds mapped to hyperbolic M^4 substrates to rectify ambient photonic noise into coherent energy flux through geometric diode resonance.
 Photon Klein bottle trap with defined 64 states step up,2⁶.
 
 Abstract
