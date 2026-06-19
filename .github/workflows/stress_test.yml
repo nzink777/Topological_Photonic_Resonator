@@ -18,3 +18,9 @@ jobs:
           pip install numpy scipy
       - name: Run Failure Analysis
         run: python stress_test.py
+      - name: Upload Plot Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resonator-plots
+          path: resonator_output.png
+          
