@@ -13,6 +13,6 @@ jobs:
           python-version: '3.10'
       - name: Install Dependencies
         run: |
-          pip install numpy scipy # Add your specific solver libraries here (e.g., meep, mpb)
+          pip install numpy scipy
       - name: Run Failure Analysis
         run: python stress_test.py
