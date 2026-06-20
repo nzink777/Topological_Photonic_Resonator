@@ -1,4 +1,4 @@
-[![Validation Pipeline](https://github.com/nzink777/Topological_Photonic_Resonator/actions/workflows/main.yml/badge.svg)](https://github.com/nzink777/Topological_Photonic_Resonator/actions)
+[![Validation Pipeline](https://github.com/nzink777/Topological_Photonic_Resonator/actions/workflows/main/stress_test.yml/badge.svg)](https://github.com/nzink777/Topological_Photonic_Resonator/actions)
 
 # Topological_Photonic_Resonator
 A passive energy harvesting framework utilizing non-orientable topology to rectify ambient photonic noise via the topological geometric sheer".
