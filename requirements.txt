@@ -1,9 +1,6 @@
 numpy
 scipy
 matplotlib
-pandas
-meep
-math
 os
 logging
 sys
