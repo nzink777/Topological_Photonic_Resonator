@@ -1,0 +1,21 @@
+name: Validation Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        pip install pandas scipy meep
+    - name: Run Simulation
+      run: python experiments/analysis/meep_cornucopia_sim.py
+    - name: Run Analysis
+      run: python experiments/analysis/delta_E_calc.py
+      
