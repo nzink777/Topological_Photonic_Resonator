@@ -13,6 +13,32 @@ from resonator_logic import calculate_bandgap
 import flux_calculator
 import hofstadter_generator
 import lattice_mapper
+def stress_test_lattice_noise(noise_level=0.02):
+    print(f"[*] Running Defect Sensitivity Test (Noise: {noise_level*100}%)")
+    
+    # 1. Perform calculation
+    current_gap = calculate_bandgap(perturbation=noise_level)
+    
+    # 2. Add Visualization (The "Painting" step)
+    # Assuming lattice_mapper provides a way to get the grid data
+    lattice_data = lattice_mapper.get_current_grid() 
+    plt.figure(figsize=(8, 6))
+    plt.imshow(lattice_data, cmap='viridis', interpolation='nearest')
+    plt.colorbar(label='State ID')
+    plt.title(f"Lattice Projection (Noise: {noise_level*100}%)")
+    
+    # 3. Add the validation text you currently have
+    threshold = 0.4
+    if current_gap < threshold:
+        print(f"[!] FAILURE: Bandgap too small ({current_gap:.4f})")
+        return False
+    
+    # Add status to the plot
+    plt.text(0.05, 0.95, f"Noise: {noise_level}\nBandgap: {current_gap:.4f}", 
+             transform=plt.gca().transAxes, bbox=dict(facecolor='white', alpha=0.5))
+             
+    return True
+
 
 # 3. Visualization Helper
 def generate_visual_report(noise_level, bandgap_result):
