@@ -1,2 +1,2 @@
 
-Outputs if workflows Actions will be in this directory
+Outputs of workflows Actions will be in this directory
