@@ -52,7 +52,7 @@ def stress_test_lattice_noise(noise_level=0.02):
 
 # 5. Orchestration
 def run_all_tests():
-    print("=== INITIALIZING TECHNOMOUSE MASTER SUITE ===")
+    print("=== INITIALIZING MASTER SUITE ===")
     
     # Check 1: Loading
     if not run_smoke_test():
