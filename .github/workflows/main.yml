@@ -1,0 +1,46 @@
+name: Unified Resonator Pipeline
+
+on: [push]
+
+jobs:
+  # Stage 1: The Heavy Lift (Simulation)
+  simulation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-activate-base: false
+          activate-environment: cornucopia
+          channels: conda-forge
+          python-version: 3.9
+      - name: Install pymeep
+        shell: bash -l {0}
+        run: conda install -c conda-forge pymeep pandas scipy
+      - name: Run Simulation
+        shell: bash -l {0}
+        run: python experiments/analysis/meep_cornucopia_sim.py
+
+  # Stage 2: The Sentinel (Validation)
+  # This runs ONLY after simulation succeeds
+  test:
+    needs: simulation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Stress Test
+        run: python stress_test.py
+      - name: Upload Plot Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resonator-plots
+          path: outputs/resonator_output.png
+          
